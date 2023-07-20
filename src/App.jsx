@@ -12,11 +12,18 @@ function App() {
     setCount(count - 1)
   }
 
+  const CountHandlerReset = () => {
+    setCount(0)
+  }
+
   return (
     <>
       <div>
-        <p>{count}</p>
-        <button onClick={CountHandlerDecrease}>Decrease</button>
+        <p name='reset'>{count}</p>
+        <button name='' onClick={CountHandlerDecrease}>
+          Decrease
+        </button>
+        <button onClick={CountHandlerReset}>Reset</button>
         <button onClick={CountHandlerIncrease}>Increase</button>
       </div>
     </>
