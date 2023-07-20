@@ -8,7 +8,7 @@ describe('<App />', () => {
 
     cy.contains('Reset').click()
 
-    cy.contains('Reset')
+    cy.get('p[name="reset"]')
       .invoke('val')
       .then((sometext) => cy.log(sometext))
   })
