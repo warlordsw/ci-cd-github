@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import { baseUrl } from '../url_config'
+
+console.log(baseUrl)
 
 function App({ initial = 0 }) {
   const [count, setCount] = useState(initial)
