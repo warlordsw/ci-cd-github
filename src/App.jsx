@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+function App({ initial = 0 }) {
+  const [count, setCount] = useState(initial)
 
   const CountHandlerIncrease = () => {
     setCount(count + 1)
@@ -18,13 +18,15 @@ function App() {
 
   return (
     <>
-      <div>
+      <div id='testCountDivContainer'>
         <p name='reset'>{count}</p>
-        <button name='' onClick={CountHandlerDecrease}>
+        <button id='decrement' onClick={CountHandlerDecrease}>
           Decrease
         </button>
         <button onClick={CountHandlerReset}>Reset</button>
-        <button onClick={CountHandlerIncrease}>Increase</button>
+        <button id='increment' onClick={CountHandlerIncrease}>
+          Increase
+        </button>
       </div>
     </>
   )
