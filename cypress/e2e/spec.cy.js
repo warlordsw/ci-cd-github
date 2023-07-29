@@ -1,5 +1,5 @@
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('https://comfy-torrone-9aa30a.netlify.app/')
   })
 })
