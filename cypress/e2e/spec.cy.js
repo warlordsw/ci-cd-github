@@ -14,4 +14,16 @@ describe('template spec', () => {
     cy.get(decrementButtonSelector).click().click()
     cy.get(DivContainerSelector).should('contain.text', 1)
   })
+
+  it('can be increment', () => {
+    cy.visit('https://comfy-torrone-9aa30a.netlify.app/')
+    cy.get(incrementButtonSelector).click()
+    cy.get(DivContainerSelector).should('contain.text', 1)
+  })
+
+  it('can be decrement', () => {
+    cy.visit('https://comfy-torrone-9aa30a.netlify.app/')
+    cy.get(decrementButtonSelector).click()
+    cy.get(DivContainerSelector).should('contain.text', -1)
+  })
 })
